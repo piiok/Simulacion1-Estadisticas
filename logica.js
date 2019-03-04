@@ -38,8 +38,8 @@ function proceso(e) {
 		var config1 = roundRobin(q, p1, p2);
 		stepsp+=config1[1];
 		tsp1p+=config1[0][0];
-		
 		tsp2p+=config1[0][1];
+		console.log("q="+q+", p1="+p1+", p2="+p2+", steps="+config1[1]+", Tsp1="+config1[0][0]+", Tsp2="+config1[0][1]);
 	}
 
 	qp/=e;
