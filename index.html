@@ -1,0 +1,108 @@
+<html>
+    <head> 
+            <title>
+
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="./JQuery/jquery-3.3.1.min.js"></script>
+            <script src="./Chart/Chart.js"></script>
+            <script src="./Chart/Chart.bundle.min.js"></script>
+            <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="./Bootstrap/css/bootstrap-grid.min.css">
+            <script src="Bootstrap/js/bootstrap.min.js"></script>
+            <script src="./Bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="./logica.js"></script>
+
+    </head>
+    <body>
+        <br>
+        <div class="container">
+            <h2 class="text-center">SIMULACION DIGITAL - ESTADISTICAS</h2>
+            <br>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#colas">Colas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#ascensor">Ascensor</a>
+            </li>
+            </ul>
+        
+            <!-- Tab panes -->
+            <div class="tab-content">
+            <div id="colas" class="container tab-pane active"><br>
+                <h3>Colas</h3>
+                <p>A continuacion se simula la ejecución de *2* procesos en un procesador de un solo núcleo en el que es posible establecer el quantum 
+                    (en segundos) y el tiempo que demora cada proceso es un aleatorio entre 1 y 100 (segundos), el programa debe 
+                    mostrar la forma como fueron siendo atendidos y finalizados los procesos.</p>
+                    <div class="input-group mb-3 input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Iteraciones</span>
+                        </div>
+                        <input id="iteraciones" type="number" class="form-control" value="1" step="1" min="1" onchange="proceso(this.value)">
+                    </div>
+                    <div class="input-group mb-3 input-group-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Quantum promedio</span>
+                            </div>
+                            <input id="qpromedio" type="text" class="form-control" value="" min="1" disabled>
+                    </div>
+                    <div class="input-group mb-3 input-group-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Proceso 1 promedio</span>
+                            </div>
+                            <input id="p1promedio" type="number" class="form-control" value="" min="1" disabled>
+                    </div>
+                    <div class="input-group mb-3 input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Proceso 2 Promedio</span>
+                        </div>
+                        <input id="p2promedio" type="number" class="form-control" value="" min="1" disabled>
+                    </div>
+                    <div class="input-group mb-3 input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Tiempo de salida del proceso 1 promedio</span>
+                        </div>
+                        <input id="tsp1promedio" type="number" class="form-control" value="" min="1" disabled>
+                    </div>
+                    <div class="input-group mb-3 input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Tiempo de salida del proceso 2 promedio</span>
+                        </div>
+                        <input id="tsp2promedio" type="number" class="form-control" value="" min="1" disabled>
+                    </div>
+                    <div class="input-group mb-3 input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Steps promedio</span>
+                        </div>
+                        <input id="stepspromedio" type="number" class="form-control" value="" min="1" disabled>
+                    </div>
+            </div>
+            <div id="ascensor" class="container tab-pane fade"><br>
+                <h3>Ascensor</h3>
+                <p>A continuacion se simula un escenario de un ascensor el cual solo recoge personas en el 1er piso, y debe ir dejando persona a lo largo de la subida del ascensor. Para ellos solo necesitammos la cantidad de personas que soporta el ascensor y la cantidad de pisos del edificio.</p>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Capacidad del ascensor</span>
+                    </div>
+                    <input id="capacidad" type="number" class="form-control"  step="1" min="1" onchange="proceso2()">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Cantidad de pisos</span>
+                        </div>
+                        <input id="pisos" type="text" class="form-control" min="1" step="1" onchange="proceso2()">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Cantidad inicial de personas</span>
+                    </div>
+                    <input id="inicial" type="text" class="form-control"  min="1" step="1" disabled>
+                </div>
+            </div>
+            </div>
+            <br>
+        </div>
+    </body>
+</html>
