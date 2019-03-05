@@ -40,7 +40,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Iteraciones</span>
                         </div>
-                        <input id="iteraciones" type="number" class="form-control" value="1" step="1" min="1" onchange="proceso(this.value)">
+                        <input id="iteracionesAsc" type="number" class="form-control" value="1" step="1" min="1" onchange="proceso(this.value)">
                     </div>
                     <div class="input-group mb-3 input-group-sm">
                             <div class="input-group-prepend">
@@ -84,6 +84,12 @@
                 <p>A continuacion se simula un escenario de un ascensor el cual solo recoge personas en el 1er piso, y debe ir dejando persona a lo largo de la subida del ascensor. Para ellos solo necesitammos la cantidad de personas que soporta el ascensor y la cantidad de pisos del edificio.</p>
                 <div class="input-group mb-3 input-group-sm">
                     <div class="input-group-prepend">
+                        <span class="input-group-text">Iteraciones</span>
+                    </div>
+                    <input id="iteraciones" type="number" class="form-control" value="1" step="1" min="1" onchange="proceso(this.value)">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
                         <span class="input-group-text">Capacidad del ascensor</span>
                     </div>
                     <input id="capacidad" type="number" class="form-control"  step="1" min="1" onchange="proceso2()">
@@ -99,6 +105,9 @@
                         <span class="input-group-text">Cantidad inicial de personas</span>
                     </div>
                     <input id="inicial" type="text" class="form-control"  min="1" step="1" disabled>
+                </div>
+                <div id="grafica2">
+                    <canvas id="canvas3" height="450" width="600"></canvas>
                 </div>
             </div>
             </div>
